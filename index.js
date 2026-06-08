@@ -3,7 +3,7 @@ function topla(a, b) {
 }
 
 // Basit bir test mantığı
-const sonuc = topla(5, 10);
+const sonuc = topla(6, 10);
 if (sonuc === 15) {
     console.log("✅ Test Başarılı: 5 + 10 = 15");
     process.exit(0); // Başarılı çıkış kodu
