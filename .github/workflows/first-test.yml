@@ -1,0 +1,29 @@
+name: Kod Kontrol ve Test Otomasyonu
+
+# GitHub Actions'ın çalışacağı tetikleyiciler
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-ve-kontrol:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Node.js Ortamını Hazırla
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Test Kodunu Çalıştır
+        run: node index.js
+
+      - name: Başarı Mesajı
+        run: echo "Harika! Kod başarıyla test edildi ve deploy edilmeye hazır."
