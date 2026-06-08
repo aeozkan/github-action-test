@@ -11,7 +11,7 @@ on:
 
 jobs:
   test-ve-kontrol:
-    runs-on: ubuntu-latest
+    runs-on: aziz-runner-label
 
     steps:
       - name: Depoyu Klonla
